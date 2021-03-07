@@ -2,9 +2,7 @@
   <div>
     <div class="search-filter my-2 filter-content">
       <div class="search">
-        <label>
-         <input type="text" v-model="search" class="search-bar" placeholder="Buscar País..."/>
-        </label>
+         <input type="text" v-model="search" class="search-bar" placeholder="Buscar País..." aria-label="Search"/>
       </div>
       <div class="filter">
         <label>
