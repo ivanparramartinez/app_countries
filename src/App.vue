@@ -14,7 +14,6 @@ export default {
   data(){
     return {
       mode: 'dark',
-      countries: null
     }
   },
   components: {
