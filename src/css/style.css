@@ -149,15 +149,6 @@ input[type=text] {
         font-size: 0.6rem;
     }
 
-    .filter {
-      position: relative;
-      top: -15px;
-      right: 30px;
-      .filter-selected {
-        padding: 18px 18px;
-      }
-    }
-
     .filter-content {
         flex-direction: column;
         align-items: flex-start;
