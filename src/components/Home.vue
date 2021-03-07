@@ -6,7 +6,7 @@
       </div>
       <div class="filter">
         <label>
-          <select name="countries" class="filter" v-model="region">
+          <select name="countries" class="filter" v-model="region" aria-label="Select">
             <option value="" selected>Filter by Region</option>
             <option value="Africa">Africa</option>
             <option value="America">America</option>
@@ -78,7 +78,7 @@ export default {
           "Europa",
           "Oceania"
       ],
-      Countries: null,
+      Countries: [],
       search: '',
       region: ''
     }
