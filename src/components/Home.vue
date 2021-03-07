@@ -6,7 +6,7 @@
       </div>
       <div class="filter">
         <label>
-          <select name="countries" class="filter" v-model="region" aria-label="Select">
+          <select name="countries" class="filter-select" v-model="region" aria-label="Select">
             <option value="" selected>Filter by Region</option>
             <option value="Africa">Africa</option>
             <option value="Americas">Americas</option>

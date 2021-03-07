@@ -95,6 +95,15 @@ header {
     border-radius: var(--border-radius);
 }
 
+.filter-select {
+    border: none;
+    outline: none;
+    display: flex;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+}
+
 .my-2 {
     margin-top: 2rem;
     margin-bottom: 2rem;
