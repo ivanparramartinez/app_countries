@@ -85,8 +85,6 @@ export default {
   },
   mounted() {
     this.getCountries();
-    this.filterCountriesByRegion();
-    this.filteredCountriesSearch();
   },
   methods: {
     getCountries() {
