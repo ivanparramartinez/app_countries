@@ -16,7 +16,6 @@
           </select>
         </label>
       </div>
-
     </div>
 
     <div class="container grid" v-if="region === 'All' || !region">
@@ -40,7 +39,7 @@
       </article>
     </div>
     <div class="container grid" v-else>
-      <article v-for="(country1, id2) in filterCountriesByRegion" :key="id2" class="card">
+      <article v-for="(country1, id2) in filteredCountriesSearch" :key="id2" class="card">
         <img :src="country1.flag" alt="" class="img-fluid">
         <div class="card-content">
           <h3>{{ country1.name }}</h3>
