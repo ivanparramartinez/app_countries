@@ -172,3 +172,8 @@ input[type=text] {
     }
 }
 
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+select:focus, textarea:focus, input:focus {
+        font-size: 16px;
+    }
+}
