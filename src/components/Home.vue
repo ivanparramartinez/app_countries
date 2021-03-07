@@ -19,7 +19,9 @@
     </div>
     <div class="container grid">
       <article v-for="(country1, id2) in filterCountries" :key="id2" class="card">
-        <img :src="country1.flag" alt="" class="img-fluid">
+        <router-link :to="url(country1.name)">
+            <img :src="country1.flag" class="flag" :alt="country1.name" />
+        </router-link>
         <div class="card-content">
           <h3>{{ country1.name }}</h3>
           <p>
@@ -73,6 +75,9 @@ export default {
           })
           .catch(e => console.log(e))
     },
+    url(country) {
+      return "/country/" + country;
+    }
   },
   computed: {
     filterCountries() {

@@ -1,13 +1,13 @@
 <template>
   <div class="app" :class="mode">
     <Header :mode="mode" @clicked="clicked"/>
-    <Home :mode="mode"/>
+    <router-view :key="$route.fullPath"></router-view>
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header";
-import Home from "@/components/Home";
+
 
 export default {
   name: 'App',
@@ -17,7 +17,7 @@ export default {
     }
   },
   components: {
-    Home,
+
     Header,
   },
   methods: {
