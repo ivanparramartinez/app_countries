@@ -110,18 +110,19 @@ header {
     align-items: center;
 }
 
-.form-search {
-    background: #ffffff;
+.search {
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     padding: 1rem;
+    outline: none;
+    border: none;
 }
 
 .form-search i{
     opacity: 0.5;
 }
 
-.form-search input {
+.search input {
     border: none;
     outline: none;
     margin-left: 1rem;
