@@ -1,28 +1,26 @@
 <template>
   <div class="app" :class="mode">
     <Header :mode="mode" @clicked="clicked"/>
-    <router-view :key="$route.fullPath"></router-view>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header";
 
-
 export default {
   name: 'App',
-  data(){
+  data() {
     return {
       mode: 'dark',
     }
   },
   components: {
-
     Header,
   },
   methods: {
-    clicked: function(){
-      if(this.mode === 'dark'){
+    clicked: function () {
+      if (this.mode === 'dark') {
         this.mode = 'light'
       } else {
         this.mode = 'dark'
