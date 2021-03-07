@@ -2,18 +2,14 @@
   <div>
     <div class="search-filter my-2 filter-content">
       <div class="search">
-        <form class="form-search">
-          <label>
-            <i class="fa fa-search"></i>
-            <input type="text" placeholder="Search Blog" v-model="search">
-          </label>
-        </form>
+        <label>
+         <input type="text" v-model="search" class="search-bar" placeholder="Buscar País..."/>
+        </label>
       </div>
       <div class="filter">
         <label>
           <select name="countries" class="filter" v-model="region">
-            <option value="" selected disabled hidden>Filter by Region</option>
-            <option value="All">All</option>
+            <option value="" selected>Filter by Region</option>
             <option value="Africa">Africa</option>
             <option value="America">America</option>
             <option value="Asia">Asia</option>
@@ -22,6 +18,7 @@
           </select>
         </label>
       </div>
+
     </div>
 
     <div class="container grid" v-if="region === 'All' || !region">
@@ -75,6 +72,14 @@ export default {
   name: 'Home',
   data() {
     return {
+      regions: [
+          "Filter by Region",
+          "Africa",
+          "America",
+          "Asia",
+          "Europa",
+          "Oceania"
+      ],
       Countries: null,
       search: '',
       region: ''
