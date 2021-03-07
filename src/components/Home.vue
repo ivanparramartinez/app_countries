@@ -9,7 +9,7 @@
           <select name="countries" class="filter" v-model="region" aria-label="Select">
             <option value="" selected>Filter by Region</option>
             <option value="Africa">Africa</option>
-            <option value="America">America</option>
+            <option value="Americas">Americas</option>
             <option value="Asia">Asia</option>
             <option value="Europe">Europe</option>
             <option value="Oceania">Oceania</option>
@@ -17,29 +17,8 @@
         </label>
       </div>
     </div>
-
-    <div class="container grid" v-if="region === 'All' || !region">
-      <article v-for="(country, id1) in Countries" :key="id1" class="card">
-        <img :src="country.flag" alt="" class="img-fluid">
-        <div class="card-content">
-          <h3>{{ country.name }}</h3>
-          <p>
-            <b>Population: </b>
-            {{ country.population }}
-          </p>
-          <p>
-            <b>Region: </b>
-            {{ country.region }}
-          </p>
-          <p>
-            <b>Capital: </b>
-            {{ country.capital }}
-          </p>
-        </div>
-      </article>
-    </div>
-    <div class="container grid" v-else>
-      <article v-for="(country1, id2) in filteredCountriesSearch" :key="id2" class="card">
+    <div class="container grid">
+      <article v-for="(country1, id2) in filterCountries" :key="id2" class="card">
         <img :src="country1.flag" alt="" class="img-fluid">
         <div class="card-content">
           <h3>{{ country1.name }}</h3>
@@ -93,18 +72,22 @@ export default {
             this.Countries = response.data
           })
           .catch(e => console.log(e))
-    }
+    },
   },
   computed: {
-    filterCountriesByRegion: function () {
-      return this.Countries.filter((country1) => {
-        return country1.region.match(this.region)
-    });
-    },
-    filteredCountriesSearch: function (){
-      return this.Countries.filter((country2) => {
-        return country2.name.toLowerCase().includes(this.search.toLowerCase());
-      });
+    filterCountries() {
+      return this.Countries.filter(country => {
+        if (this.region) {
+          return (
+              country.region.toLowerCase() === this.region.toLowerCase() &&
+                  country.name.toLowerCase().startsWith(this.search.toLowerCase())
+          )
+        } else {
+          return country.name.toLowerCase().startsWith(this.search.toLowerCase())
+        }
+
+
+      })
     }
   }
 }
