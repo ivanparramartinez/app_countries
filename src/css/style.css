@@ -87,7 +87,7 @@ article {
 .grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 6rem;
+    gap: 4rem;
 }
 
 .search-filter {
