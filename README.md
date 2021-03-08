@@ -8,6 +8,9 @@ Los íconos que aparecen tanto en el toggle dark-light, como el que está en el 
 
 El proyecto es responsive. 
 
+## Deployment
+El despliegue de la aplicación se hizo por medio de Netlify, y se puede visualizar en el siguiente enlace: https://distracted-wilson-6a42ac.netlify.app/
+
 ## Autor
 Néstor Iván Parra Martínez
 
