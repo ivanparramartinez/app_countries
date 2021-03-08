@@ -1,7 +1,7 @@
 <template>
   <div class="app" :class="mode">
     <Header :mode="mode" @clicked="clicked"/>
-    <router-view></router-view>
+    <router-view :key="$route.path"></router-view>
   </div>
 </template>
 
