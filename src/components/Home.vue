@@ -2,7 +2,7 @@
   <div>
     <div class="search-filter my-2 filter-content">
       <div class="search">
-        <input type="text" v-model="search" placeholder="Buscar País..." aria-label="Search"/>
+        <input type="text" v-model="search" placeholder="Buscar País..." aria-label="Search" size="50"/>
       </div>
       <div class="filter" style="width:200px;">
         <select name="countries" class="filter-select" v-model="region" aria-label="Select">
@@ -22,6 +22,7 @@
           <img :src="country1.flag" class="flag" :alt="country1.name"/>
         </router-link>
         <div class="card-content">
+          <br>
           <h3>{{ country1.name }}</h3>
           <br>
           <p>
