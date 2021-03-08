@@ -1,6 +1,15 @@
 :root {
     --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --border-radius: 0.35rem;
+    --primary-color: #0b1216;
+    --bg-color: #fafafa;
+    --bg-secondary-color: #ffffff;
+}
+
+.dark {
+    --primary-color: #fafafa;
+    --bg-color: #212e37;
+    --bg-secondary-color: #2b3743;
 }
 
 * {
@@ -13,18 +22,13 @@
 .app {
     width: 100vw;
     min-height: 100vh;
-    background: #fafafa;
+    background: var(--bg-color);
     font-family: Nunito Sans, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #0b1216;
+    color: var(--primary-color);
     padding-bottom: 3rem;
-}
-
-.dark {
-    background: #212e37;
-    color: #fafefe;
 }
 
 header {
@@ -33,16 +37,12 @@ header {
     align-items: center;
     padding: 0 25px;
     height: 60px;
-    background: #ffffff;
+    background: var(--bg-secondary-color);
     transition: background 0.3s ease-in-out;
 }
 
-.dark header {
-    background: #2b3743;
-}
-
-.dark article {
-    background: #2b3743;
+article {
+    background: var(--bg-secondary-color);
 }
 
 .container {
@@ -99,6 +99,7 @@ header {
 }
 
 .filter {
+    grid-area: filterArea;
     border: none;
     outline: none;
     box-shadow: var(--box-shadow);
@@ -106,15 +107,18 @@ header {
     padding: 12px 20px;
     box-sizing: border-box;
     border-radius: var(--border-radius);
+    background: var(--bg-secondary-color);
 }
 
 .filter-select {
+    display: block;
     border: none;
     outline: none;
-    display: flex;
     padding: 12px 20px;
     box-sizing: border-box;
     border-radius: var(--border-radius);
+    background: var(--bg-secondary-color);
+    color: var(--primary-color);
 }
 
 .my-2 {
@@ -138,6 +142,7 @@ header {
     padding: 1rem;
     outline: none;
     border: none;
+    background: var(--bg-secondary-color);
 }
 
 .form-search i {
@@ -148,11 +153,14 @@ header {
     border: none;
     outline: none;
     margin-left: 1rem;
-}
-
-input[type=text] {
+    background: var(--bg-secondary-color);
+    color: var(--primary-color);
     padding: 12px 20px;
     box-sizing: border-box;
+}
+
+::placeholder {
+   color: var(--primary-color);
 }
 
 @media only screen and (device-width: 768px) {

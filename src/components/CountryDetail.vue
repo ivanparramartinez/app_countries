@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <div class="btn">
-      <button @click="back" class="backBtn"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</button>
+      <button @click="back" class="backBtn"><i class="fa fa-chevron-left" aria-hidden="true"></i> Atrás</button>
     </div>
     <div class="container my-2 wrapper">
       <div>

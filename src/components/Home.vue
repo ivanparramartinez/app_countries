@@ -1,9 +1,11 @@
 <template>
   <div>
     <div class="search-filter my-2 filter-content">
+      <form>
       <div class="search">
-         <input type="text" v-model="search" class="search-bar" placeholder="Buscar País..." aria-label="Search"/>
+         <input type="text" v-model="search" placeholder="Buscar País..." aria-label="Search"/>
       </div>
+      </form>
       <div class="filter">
         <label>
           <select name="countries" class="filter-select" v-model="region" aria-label="Select">
