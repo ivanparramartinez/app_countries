@@ -1,7 +1,7 @@
 <template>
   <div class="details-wrapper my-2">
     <div>
-      <button @click="back" class="buttons"><i class="fa fa-arrow-left" aria-hidden="true"></i>Atrás</button>
+      <button @click="back" class="buttons"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back</button>
     </div>
     <div class="country-flag">
       <img :src="country_detail.flag" class="flag" :alt="country_detail.name"/>

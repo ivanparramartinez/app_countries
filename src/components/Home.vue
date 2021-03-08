@@ -2,7 +2,8 @@
   <div>
     <div class="search-filter my-2 filter-content">
       <div class="search">
-        <input type="text" v-model="search" placeholder="Buscar País..." aria-label="Search" size="50"/>
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input type="text" v-model="search" placeholder="Search country..." aria-label="Search" size="50"/>
       </div>
       <div class="filter" style="width:200px;">
         <select name="countries" class="filter-select" v-model="region" aria-label="Select">

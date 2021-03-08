@@ -192,6 +192,10 @@ article {
     box-sizing: border-box;
 }
 
+.search i{
+    margin-left: 1rem;
+}
+
 
 .details-wrapper {
     display: grid;
