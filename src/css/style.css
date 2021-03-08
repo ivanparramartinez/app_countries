@@ -99,11 +99,12 @@ article {
 }
 
 .filter {
+    position: relative;
+    display: inline-block;
     grid-area: filterArea;
     border: none;
     outline: none;
     box-shadow: var(--box-shadow);
-    display: flex;
     padding: 12px 20px;
     box-sizing: border-box;
     border-radius: var(--border-radius);
@@ -136,13 +137,24 @@ article {
     align-items: center;
 }
 
-.search {
+.search{
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     padding: 1rem;
     outline: none;
     border: none;
     background: var(--bg-secondary-color);
+}
+
+.backBtn {
+    border: none;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    background: var(--bg-secondary-color);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .form-search i {

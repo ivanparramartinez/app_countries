@@ -1,9 +1,9 @@
 <template>
-  <div class="hello">
+  <div class="my-2 container">
     <div class="btn">
       <button @click="back" class="backBtn"><i class="fa fa-chevron-left" aria-hidden="true"></i> Atrás</button>
     </div>
-    <div class="container my-2 wrapper">
+    <div class="my-2 wrapper">
       <div>
         <img :src="country_detail.flag" class="flag" :alt="country_detail.name" width="100%"/>
       </div>
@@ -12,7 +12,7 @@
         <br>
         <div>
           <p><b>Native Name: </b>{{ country_detail.nativeName }}</p>
-          <p><b>Population: </b>{{ country_detail.population.toLocaleString() }}</p>
+          <p><b>Population: </b>{{ country_detail.population.toLocaleString('es-CO') }}</p>
           <p><b>Region: </b>{{ country_detail.region }}</p>
           <p><b>Sub Region: </b>{{ country_detail.subregion }}</p>
           <p><b>Capital: </b>{{ country_detail.capital }}</p>

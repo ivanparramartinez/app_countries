@@ -1,28 +1,25 @@
 <template>
   <div>
     <div class="search-filter my-2 filter-content">
-      <form>
       <div class="search">
-         <input type="text" v-model="search" placeholder="Buscar País..." aria-label="Search"/>
+        <input type="text" v-model="search" placeholder="Buscar País..." aria-label="Search"/>
       </div>
-      </form>
-      <div class="filter">
-        <label>
-          <select name="countries" class="filter-select" v-model="region" aria-label="Select">
-            <option value="" selected>Filter by Region</option>
-            <option value="Africa">Africa</option>
-            <option value="Americas">Americas</option>
-            <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-            <option value="Oceania">Oceania</option>
-          </select>
-        </label>
+      <div class="filter" style="width:200px;">
+        <select name="countries" class="filter-select" v-model="region" aria-label="Select">
+          <option value="" selected>Filter by Region</option>
+          <option value="Africa">Africa</option>
+          <option value="Americas">Americas</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Oceania">Oceania</option>
+        </select>
       </div>
+
     </div>
     <div class="container grid">
       <article v-for="(country1, id2) in filterCountries" :key="id2" class="card">
         <router-link :to="url(country1.name)">
-            <img :src="country1.flag" class="flag" :alt="country1.name" />
+          <img :src="country1.flag" class="flag" :alt="country1.name"/>
         </router-link>
         <div class="card-content">
           <h3>{{ country1.name }}</h3>
@@ -57,12 +54,12 @@ export default {
   data() {
     return {
       regions: [
-          "Filter by Region",
-          "Africa",
-          "America",
-          "Asia",
-          "Europa",
-          "Oceania"
+        "Filter by Region",
+        "Africa",
+        "America",
+        "Asia",
+        "Europa",
+        "Oceania"
       ],
       Countries: [],
       search: '',
@@ -91,7 +88,7 @@ export default {
         if (this.region) {
           return (
               country.region.toLowerCase() === this.region.toLowerCase() &&
-                  country.name.toLowerCase().startsWith(this.search.toLowerCase())
+              country.name.toLowerCase().startsWith(this.search.toLowerCase())
           )
         } else {
           return country.name.toLowerCase().startsWith(this.search.toLowerCase())
