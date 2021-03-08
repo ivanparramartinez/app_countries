@@ -4,23 +4,25 @@
       <button @click="back" class="backBtn"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</button>
     </div>
     <div class="container my-2 wrapper">
-      <div style="float:left; width: 50%">
+      <div>
         <img :src="country_detail.flag" class="flag" :alt="country_detail.name" width="100%"/>
       </div>
-      <div style="float:right; width: 40%" class="card-content">
+      <div class="wrapper">
         <h1>{{ country_detail.name }}</h1>
         <br>
-        <div style="float:left">
+        <div>
           <p><b>Native Name: </b>{{ country_detail.nativeName }}</p>
           <p><b>Population: </b>{{ country_detail.population }}</p>
           <p><b>Region: </b>{{ country_detail.region }}</p>
           <p><b>Sub Region: </b>{{ country_detail.subregion }}</p>
           <p><b>Capital: </b>{{ country_detail.capital }}</p>
         </div>
-        <div style="float:right">
+        <div>
           <p><b>Top Level Domain: </b>{{ country_detail.topLevelDomain[0] }}</p>
           <p><b>Currencies: </b>{{ country_detail.currencies[0].name }}</p>
-          <p><b>Languages: </b>{{ country_detail.languages[0].name }}</p>
+          <p><b>Languages: </b>
+            <span class="info" v-for="language in country_detail.languages" :key="language.index">{{ language.name}}</span>
+          </p>
         </div>
       </div>
     </div>
@@ -35,7 +37,7 @@ export default {
   data() {
     return {
       country_name: '',
-      country_detail: null
+      country_detail: []
     }
   },
   mounted() {

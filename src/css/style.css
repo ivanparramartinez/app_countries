@@ -65,18 +65,21 @@ header {
     border-top-right-radius: 0.5rem;
     width: 100%;
     object-fit: cover;
+    height: 21vh;
 }
 
-.card-content{
+.card-content {
     padding-left: 2rem;
     text-align: left;
 }
 
 .wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
 }
 
-.img-fluid {
+.flag {
     width: 100%;
 }
 
@@ -136,7 +139,7 @@ header {
     border: none;
 }
 
-.form-search i{
+.form-search i {
     opacity: 0.5;
 }
 
@@ -184,6 +187,12 @@ input[type=text] {
 
     .grid {
         grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
     }
 
     .search-filter {
