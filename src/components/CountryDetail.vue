@@ -12,7 +12,7 @@
         <br>
         <div>
           <p><b>Native Name: </b>{{ country_detail.nativeName }}</p>
-          <p><b>Population: </b>{{ country_detail.population }}</p>
+          <p><b>Population: </b>{{ country_detail.population.toLocaleString() }}</p>
           <p><b>Region: </b>{{ country_detail.region }}</p>
           <p><b>Sub Region: </b>{{ country_detail.subregion }}</p>
           <p><b>Capital: </b>{{ country_detail.capital }}</p>
@@ -21,7 +21,7 @@
           <p><b>Top Level Domain: </b>{{ country_detail.topLevelDomain[0] }}</p>
           <p><b>Currencies: </b>{{ country_detail.currencies[0].name }}</p>
           <p><b>Languages: </b>
-            <span class="info" v-for="language in country_detail.languages" :key="language.index">{{ language.name}}</span>
+            <span class="info" v-for="language in country_detail.languages" :key="language.index">{{ language.name }} </span>
           </p>
         </div>
       </div>

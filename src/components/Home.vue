@@ -27,7 +27,7 @@
           <br>
           <p>
             <b>Population: </b>
-            {{ country1.population }}
+            {{ country1.population.toLocaleString() }}
           </p>
           <p>
             <b>Region: </b>

@@ -65,7 +65,7 @@ header {
     border-top-right-radius: 0.5rem;
     width: 100%;
     object-fit: cover;
-    height: 21vh;
+    height: 18vh;
 }
 
 .card-content {
@@ -77,6 +77,7 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
+    text-align: left;
 }
 
 .flag {
@@ -86,7 +87,7 @@ header {
 .grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 3rem;
+    gap: 6rem;
 }
 
 .search-filter {
@@ -154,15 +155,34 @@ input[type=text] {
     box-sizing: border-box;
 }
 
-@media (max-width: 1000px) {
+@media only screen and (device-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card img {
+    height: 15vh;
+    }
+}
+
+@media only screen and (device-width: 1024px) {
     .grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+
+    .card img {
+    height: 15vh;
+    }
 }
+
 
 @media (max-width: 750px) {
     .grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card img {
+    height: 15vh;
     }
 }
 
@@ -201,6 +221,10 @@ input[type=text] {
 
     select:focus, textarea:focus, input:focus {
         font-size: 18px;
+    }
+
+    .card img {
+    height: 20vh;
     }
 }
 
