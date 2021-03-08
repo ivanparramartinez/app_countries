@@ -49,6 +49,9 @@ import axios from 'axios';
 
 export default {
   name: 'Home',
+  metaInfo: {
+    title: 'Home'
+  },
   data() {
     return {
       regions: [

@@ -15,6 +15,9 @@ export default {
       mode: 'dark',
     }
   },
+  metaInfo: {
+    titleTemplate: '%s - REST Countries App'
+  },
   components: {
     Header,
   },

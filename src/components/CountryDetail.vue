@@ -34,6 +34,9 @@ import axios from 'axios';
 
 export default {
   name: 'CountryDetail',
+  metaInfo: {
+    title: 'Country Detail'
+  },
   data() {
     return {
       country_name: '',
