@@ -19,7 +19,7 @@
     </div>
     <div class="container grid">
       <article v-for="(country1, id2) in filterCountries" :key="id2" class="card">
-        <router-link :to="url(country1.name)">
+        <router-link :to="encodeURI(url(country1.name))">
           <img :src="country1.flag" class="flag" :alt="country1.name"/>
         </router-link>
         <div class="card-content">
