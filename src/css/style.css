@@ -201,7 +201,7 @@ article {
                          "flagArea detailsArea";
     grid-template-rows: 100px 1fr;
     grid-template-columns: 50% 50%;
-    grid-gap: 4rem;
+    grid-gap: 3rem;
 }
 
 .country-name {
