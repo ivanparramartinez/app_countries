@@ -1,31 +1,39 @@
 <template>
-  <div class="my-2 container">
-    <div class="btn">
-      <button @click="back" class="backBtn"><i class="fa fa-chevron-left" aria-hidden="true"></i> Atrás</button>
+  <div class="details-wrapper my-2">
+    <div>
+      <button @click="back" class="buttons"><i class="fa fa-chevron-left" aria-hidden="true"></i> Atrás</button>
     </div>
-    <div class="my-2 wrapper">
-      <div>
-        <img :src="country_detail.flag" class="flag" :alt="country_detail.name" width="100%"/>
-      </div>
-      <div class="wrapper">
-        <h1>{{ country_detail.name }}</h1>
-        <br>
-        <div>
-          <p><b>Native Name: </b>{{ country_detail.nativeName }}</p>
-          <p><b>Population: </b>{{ country_detail.population.toLocaleString('es-CO') }}</p>
-          <p><b>Region: </b>{{ country_detail.region }}</p>
-          <p><b>Sub Region: </b>{{ country_detail.subregion }}</p>
-          <p><b>Capital: </b>{{ country_detail.capital }}</p>
-        </div>
-        <div>
-          <p><b>Top Level Domain: </b>{{ country_detail.topLevelDomain[0] }}</p>
-          <p><b>Currencies: </b>{{ country_detail.currencies[0].name }}</p>
-          <p><b>Languages: </b>
-            <span class="info" v-for="language in country_detail.languages" :key="language.index">{{ language.name }} </span>
-          </p>
-        </div>
-      </div>
+
+    <div class="country-flag">
+      <img :src="country_detail.flag" class="flag" :alt="country_detail.name"/>
     </div>
+    <div class="country-details">
+      <div class="country-name">{{ country_detail.name }}</div>
+      <div class="data-wrapper">
+        <div class="left-col">
+          <p class="label"><b>Native Name: </b><span class="info">{{ country_detail.nativeName }}</span></p>
+          <p class="label"><b>Population: </b><span class="info">{{ country_detail.population }}</span></p>
+          <p class="label"><b>Region: </b><span class="info">{{ country_detail.region }}</span></p>
+          <p class="label"><b>Sub Region: </b><span class="info">{{ country_detail.subregion }}</span></p>
+          <p class="label"><b>Capital: </b><span class="info">{{ country_detail.capital }}</span></p>
+        </div>
+        <div class="right-col">
+          <p class="label"><b>Top Level Domain: </b><span class="info">{{ country_detail.topLevelDomain[0] }}</span></p>
+          <p class="label"><b>Currencies: </b><span class="info">{{ country_detail.currencies[0].name }}</span></p>
+          <p class="label"><b>Languages: </b><span class="info" v-for="language in country_detail.languages"
+                                                   :key="language.index">{{ language.name }} </span></p>
+        </div>
+        <div class="border-countries">
+          <span class="label borders"><b>Border Countries: </b></span>
+          <span v-for="border in country_detail.borders" :key="border.index">
+            <button class="buttons-small">{{ border }}</button>
+          </span>
+          <span class="no-borders" v-if="country_detail.borders <= 0"> No borders </span>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </template>
 

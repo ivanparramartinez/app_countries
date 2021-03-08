@@ -101,7 +101,6 @@ article {
 .filter {
     position: relative;
     display: inline-block;
-    grid-area: filterArea;
     border: none;
     outline: none;
     box-shadow: var(--box-shadow);
@@ -146,13 +145,27 @@ article {
     background: var(--bg-secondary-color);
 }
 
-.backBtn {
+.buttons {
+    float: left;
     border: none;
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     background: var(--bg-secondary-color);
     color: var(--primary-color);
     padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.buttons-small {
+    float: left;
+    border: none;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    background: var(--bg-secondary-color);
+    color: var(--primary-color);
+    padding: 8px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -170,6 +183,71 @@ article {
     color: var(--primary-color);
     padding: 12px 20px;
     box-sizing: border-box;
+}
+
+
+.details-wrapper {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    min-height: 100vh;
+    grid-template-areas: "buttonArea buttonArea"
+                         "flagArea detailsArea";
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+    padding: 10px;
+    font-size: 16px;;
+}
+
+.country-name {
+    font-weight: 800;
+    font-size: 30px;
+    margin: 0 0 20px;
+}
+
+.left-col {
+    text-align: left;
+}
+
+.right-col{
+    text-align: left;
+}
+
+.label {
+    margin: 0;
+    line-height: 34px;
+}
+
+.borders {
+    display: grid;
+    width: 20%;
+    height: 150px;
+    float: left;
+    margin: 10px 15px 10px 0;
+}
+
+.country-flag {
+    grid-area: flagArea;
+}
+
+.country-details {
+    grid-area: detailsArea;
+    padding: 0 30px;
+}
+
+.data-wrapper {
+    display: grid;
+    grid-template-areas: "leftCol rightCol" "borderCountry borderCountry";
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+    margin: 10px 0 50px;
+}
+
+.border-countries {
+    grid-template-columns: 50% 50%;
+    grid-area: borderCountry;
 }
 
 ::placeholder {
