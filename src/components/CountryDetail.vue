@@ -30,7 +30,6 @@
               <button class="buttons-small">{{ getCountryByCode(border)[0].name }}</button>
             </router-link>
           </span>
-          <span class="no-borders" v-if="country_detail.borders <= 0"> No borders </span>
         </div>
       </div>
 
