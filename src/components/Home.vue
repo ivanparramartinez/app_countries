@@ -24,6 +24,7 @@
         </router-link>
         <div class="card-content">
           <h3>{{ country1.name }}</h3>
+          <br>
           <p>
             <b>Population: </b>
             {{ country1.population }}

@@ -67,6 +67,15 @@ header {
     object-fit: cover;
 }
 
+.card-content{
+    padding-left: 2rem;
+    text-align: left;
+}
+
+.wrapper {
+    display: flex;
+}
+
 .img-fluid {
     width: 100%;
 }
